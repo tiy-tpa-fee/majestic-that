@@ -6,7 +6,7 @@ class App extends Component {
 
   render () {
     return <div>
-      <h1>Majestic Thai</h1>
+      <h1>Majestic That</h1>
       <nav>
         <ul>
           <li>
@@ -27,7 +27,7 @@ class App extends Component {
         <Home />
       </main>
       <footer>
-        <p>&copy; 2017 Majestic Thai. Built with &hearts; at The Iron Yard, in St Petersburg, Florida.</p>
+        <p>&copy; 2017 Majestic That. Built with &hearts; at The Iron Yard, in St Petersburg, Florida.</p>
       </footer>
     </div>
   }
