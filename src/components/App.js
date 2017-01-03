@@ -1,35 +1,23 @@
 import React, { Component } from 'react'
+import { Router, Route, browserHistory } from 'react-router'
 
+import Layout from './Layout'
 import Home from './Home'
+import Menu from './Menu'
+import Contact from './Contact'
+import Locations from './Locations'
 
 class App extends Component {
 
   render () {
-    return <div>
-      <h1>Majestic That</h1>
-      <nav>
-        <ul>
-          <li>
-            <a href='/'>Home</a>
-          </li>
-          <li>
-            <a href='/menu'>Menu</a>
-          </li>
-          <li>
-            <a href='/contact'>Contact Us</a>
-          </li>
-          <li>
-            <a href='/locations'>Locations</a>
-          </li>
-        </ul>
-      </nav>
-      <main>
-        <Home />
-      </main>
-      <footer>
-        <p>&copy; 2017 Majestic That. Built with &hearts; at The Iron Yard, in St Petersburg, Florida.</p>
-      </footer>
-    </div>
+    return <Router history={browserHistory}>
+      <Route component={Layout}>
+        <Route path='/' component={Home} />
+        <Route path='/menu' component={Menu} />
+        <Route path='/contact' component={Contact} />
+        <Route path='/locations' component={Locations} />
+      </Route>
+    </Router>
   }
 }
 
