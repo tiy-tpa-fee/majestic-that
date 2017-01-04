@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+
 class Layout extends Component {
 
   static propTypes = {
@@ -7,7 +8,7 @@ class Layout extends Component {
   }
 
   render () {
-    return <div>
+    return <div className='layout'>
       <h1>The Majestic That</h1>
       <nav>
         <ul>
@@ -29,7 +30,7 @@ class Layout extends Component {
         {this.props.children}
       </main>
       <footer>
-        <p>&copy; 2017 The Majestic That. Built with &hearts; at The Iron Yard, in St Petersburg, Florida.</p>
+        <p>&copy; 2017 The Majestic That.<br />Built with &hearts; at The Iron Yard, in St Petersburg, Florida.</p>
       </footer>
     </div>
   }

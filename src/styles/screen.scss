@@ -1,14 +1,39 @@
 @import 'utility';
 
-$base-text-size: 16px;
-$base-font-family: sans-serif;
-
 html {
   text-size-adjust: 100%;
 }
 
 body {
-  @include font-smoothing(on);
   margin: 0;
   font: $base-text-size / 1 $base-font-family;
+}
+
+body,
+#root,
+.layout {
+  min-height: 100vh;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  max-width: 760px;
+  margin: 1em auto;
+  padding: 1em;
+  flex: 1;
+}
+
+nav ul {
+  padding-left: 0;
+  display: flex;
+  list-style: none;
+
+  li {
+    margin: 1em;
+  }
 }

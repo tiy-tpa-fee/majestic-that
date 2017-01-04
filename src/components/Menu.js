@@ -1,33 +1,37 @@
 import React, { Component } from 'react'
+import MenuSection from './MenuSection'
+import menuItems from '../menu.json'
 
 class Menu extends Component {
 
   render () {
+    // console.log()
+    //
+    // const categories = [
+    //   <li>Appetizers</li>,
+    //   <li>Entrees</li>,
+    //   <li>Deserts</li>,
+    //   <li>Dan's Specials</li>
+    // ]
+
+    const categories = menuItems.categories.map((category, i) => {
+      return <li key={i}>{category.name}</li>
+    })
+
+    const sections = menuItems.categories.map((category, i) => {
+      return <MenuSection name={category.name} items={category.items} key={i} />
+    })
+
     return <div>
       <h2>Our Menu</h2>
 
-      <nav>
+      <section className='categories'>
         <ul>
-          <li>Appetizers</li>
-          <li>Entrees</li>
-          <li>Deserts</li>
-          <li>Dan's Specials</li>
+          {categories}
         </ul>
-      </nav>
-
-      <section>
-        <h3>Appetizers</h3>
-
-        <table>
-          <tbody>
-            <tr>
-              <th>Spring Rolls</th>
-              <td>Yummy</td>
-              <td>$400</td>
-            </tr>
-          </tbody>
-        </table>
       </section>
+
+      {sections}
     </div>
   }
 }

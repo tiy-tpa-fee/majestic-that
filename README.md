@@ -3,3 +3,5 @@
 Uses React Router:
 
 https://github.com/ReactTraining/react-router#installation
+
+and `json-loader`
