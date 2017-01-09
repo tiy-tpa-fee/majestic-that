@@ -13,6 +13,7 @@ body,
 main {
   max-width: 760px;
   min-width: 320px;
+  min-height: 50vh;
   width: 66vw;
   margin: 1em auto;
   padding: 1em;
@@ -26,5 +27,21 @@ nav ul {
 
   li {
     margin: 1em;
+  }
+}
+
+h1 {
+  width: 100%;
+  margin-top: 0;
+
+  a {
+    background-image: url('../images/majestic-king.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 60% top;
+    color: transparent;
+    display: block;
+    height: 100vh;
+    width: 100%;
   }
 }

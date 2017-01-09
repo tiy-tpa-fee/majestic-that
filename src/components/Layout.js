@@ -9,7 +9,7 @@ class Layout extends Component {
 
   render () {
     return <div className='layout'>
-      <h1>The Majestic That</h1>
+      <h1><Link to='/'>The Majestic That</Link></h1>
       <nav>
         <ul>
           <li>
@@ -23,6 +23,9 @@ class Layout extends Component {
           </li>
           <li>
             <Link to='/locations'>Locations</Link>
+          </li>
+          <li>
+            <Link to='/orders'>Order Online!</Link>
           </li>
         </ul>
       </nav>
