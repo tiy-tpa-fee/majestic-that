@@ -95,10 +95,16 @@ class Orders extends Component {
                     <th>{pickle.name}</th>
                     <td>{this.formatUSD(pickle.price)}</td>
                     <td>
-                      <input type='number' min='1' size='1' />
+                      <input ref={`quantity-${i}-${j}`} defaultValue={1} type='number' min='1' size='1' />
                     </td>
                     <td>
-                      <button>Add to cart</button></td>
+                      <button onClick={() => {
+                        this.addToCart({
+                          name: pickle.name,
+                          price: pickle.price,
+                          quantity: this.refs[`quantity-${i}-${j}`].value
+                        })
+                      }}>Add to cart</button></td>
                   </tr>
                 })}
 
