@@ -83,6 +83,30 @@ class Orders extends Component {
           </button>
         </form>
       </div>
+      <div className='menuCopy'>
+        {data.menu.map((potato, i) => {
+          return <div key={i}>
+
+            <h3>{potato.name}</h3>
+            <table>
+              <tbody>
+                {potato.items.map((pickle, j) => {
+                  return <tr key={j}>
+                    <th>{pickle.name}</th>
+                    <td>{this.formatUSD(pickle.price)}</td>
+                    <td>
+                      <input type='number' min='1' size='1' />
+                    </td>
+                    <td>
+                      <button>Add to cart</button></td>
+                  </tr>
+                })}
+
+              </tbody>
+            </table>
+          </div>
+        })}
+      </div>
     </div>
   }
 }
