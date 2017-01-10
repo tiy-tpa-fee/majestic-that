@@ -34,7 +34,7 @@ class Orders extends Component {
   }
 
   formatUSD (n) {
-    return `$${(n / 100).toFixed(2)}`
+    return '$' + (n / 100).toFixed(2)
   }
 
   addToCart (item) {
